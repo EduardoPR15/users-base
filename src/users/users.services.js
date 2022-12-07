@@ -65,7 +65,7 @@ const patchUser = (req, res) => {
             res.status(400).json({message: err.message})
         })
 }
-
+ 
 const deleteUser = (req, res) => {
     const id = req.params.id;
 
