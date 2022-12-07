@@ -40,11 +40,12 @@ const createUser = async (obj) => {
 
 const updateUser = async (id, obj) => {
     const data = await Users.update(obj, {
-        where: {
-            id: id
+        where:{
+            id
         }
     })
-    return data[0] //? Retorna un arreglo, este arreglo puede lucir de estas 2 maneras [1], [0]
+
+    return data //? Retorna un arreglo, este arreglo puede lucir de estas 2 maneras [1], [0]
 }
 
 const deleteUser = async (id) => {

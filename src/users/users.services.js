@@ -56,7 +56,7 @@ const patchUser = (req, res) => {
     userControllers.updateUser(id, {first_name, last_name, user_name, age, country})
         .then((data) => {
             if(data){
-                res.status(200).json({message: 'User Modified Succesfully'})
+                res.status(200).json({message: 'User Modified Succesfully', data})
             } else {
                 res.status(404).json({message: 'Invalid ID'})
             }
